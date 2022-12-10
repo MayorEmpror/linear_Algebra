@@ -1,0 +1,100 @@
+.cover{
+    height : 100%;
+    width : 100%;
+    background-image: linear-gradient(rgb(128, 0, 255),blue);
+}
+body { 
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+.angry-grid {
+   display: grid; 
+
+   grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+   
+   gap: 0px;
+   height: 100%;
+   
+}
+
+#item-0 {
+
+    background-image: linear-gradient(rgb(242, 93, 187),rgb(84, 4, 74)); 
+    grid-row-start: 3;
+    grid-column-start: 5;
+ 
+    grid-row-end: 4;
+    grid-column-end: 9;
+    border-radius: 10%;
+
+  animation-name: heading_formating;
+  animation-duration: 5s;
+  animation-timing-function: linear;
+  animation-delay: 2s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  
+   font-size: 100;
+ }
+
+.bx:before {
+    content: "";
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(90deg, #45caff -91%, #ff1b6b -100% );
+    transform: translate3d(0px, 20px, 0) scale(0.95);
+    filter: blur(20px);
+    opacity: var(0.7);
+    transition: opacity 0.3s;
+    border-radius: inherit;
+}
+
+/* 
+* Prevents issues when the parent creates a 
+* stacking context. (For example, using the transform
+* property )
+*/
+.bx::after {
+    content: "";
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: inherit;
+    border-radius: inherit;
+}
+
+@keyframes heading_formating
+{
+    10%   {color:rgb(105, 101, 101); }
+    30%   {color:rgb(41, 2, 31);}
+    20%   {color:rgb(55, 81, 7);}
+    20%   {color:rgb(8, 41, 8);}
+    10%   {color:rgb(12, 1, 1);}
+  } 
+ .allotropes{
+   background-image: linear-gradient(to top,azure,rgb(209, 209, 223));
+   font-size: 26px;
+ }
+.marg {
+  padding: 10px;
+ }
+ .content2{
+  height: 50%;
+  width : 50%;
+  background-color: azure;
+  margin-top : 5%;
+ }
+ .content-atom{
+ height: 50%;
+ width : 50%;
+ background-color:  azure;
+ margin-top : 5%;
+ }
